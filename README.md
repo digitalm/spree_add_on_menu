@@ -4,8 +4,8 @@ SpreeAddOnMenu
 Purpose
 -------
 * Just Adds "ADD ON MENUS" to admin_tabs.
-* "ADD ON MENUS" simply showing an index for additional.
-* Expected to be used for other extensions.
+* "ADD ON MENUS" simply shows an blank Index page titled "MASTER CONTROLS".
+* Expected to be used for other extensions, things like putting a link on the additional data to this index page.
 
 ![ADD ON MENU index](https://raw.githubusercontent.com/wiki/digitalm/spree_add_on_menu/images/menu1.jpg)
 
@@ -25,7 +25,7 @@ bundle
 bundle exec rails g spree_add_on_menu:install
 ```
 
-To Add Another Menu: 
+To Add Links to MASTER CONTROLS: 
 -------
 for example 
 
@@ -38,7 +38,8 @@ for example
     <%= configurations_sidebar_menu_item t('add_on.add_on_supplier'), admin_add_on_suppliers_path %>
     ")
 
-check out
+Please check out the details here
+[spree_add_on_maker](https://github.com/digitalm/spree_add_on_maker)
 [spree_add_on_supplier](https://github.com/digitalm/spree_add_on_supplier)
 
 Testing
