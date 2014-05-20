@@ -1,7 +1,13 @@
 SpreeAddOnMenu
 ==============
 
-Introduction goes here.
+Purpose
+-------
+* Just Adds "ADD ON MENUS" to admin_tabs.
+* "ADD ON MENUS" simply showing an index for additional.
+* Expected to be used for other extensions.
+
+![ADD ON MENU index](https://raw.githubusercontent.com/wiki/digitalm/spree_add_on_menu/images/menu1.jpg)
 
 Installation
 ------------
@@ -18,6 +24,22 @@ Bundle your dependencies and run the installation generator:
 bundle
 bundle exec rails g spree_add_on_menu:install
 ```
+
+To Add Another Menu: 
+-------
+for example 
+
+    app/overrides/add_add_on_supplier_configration_menu_to_add_on_menu.rb
+
+    Deface::Override.new(:virtual_path => 'spree/admin/add_on_menu/index',
+    :name => 'add_add_on_supplier_configration_menu_to_add_on_menu',
+    :insert_bottom => "[data-hook='admin_add_on_menu_sidebar_menu']",
+    :text => "
+    <%= configurations_sidebar_menu_item t('add_on.add_on_supplier'), admin_add_on_suppliers_path %>
+    ")
+
+check out
+[spree_add_on_supplier](https://github.com/digitalm/spree_add_on_supplier)
 
 Testing
 -------
@@ -37,4 +59,4 @@ Simply add this require statement to your spec_helper:
 require 'spree_add_on_menu/factories'
 ```
 
-Copyright (c) 2014 [name of extension creator], released under the New BSD License
+Copyright (c) 2014 [Exsight.inc](http://www.exsight.co.jp/) , released under the New BSD License
